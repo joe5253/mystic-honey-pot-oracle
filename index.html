@@ -1050,18 +1050,6 @@
     transform: translateY(-3px);
   }
 
-  .spread-slot-pos {
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    padding: 0.9rem 0.3rem 0.4rem;
-    background: linear-gradient(0deg, rgba(18, 11, 6, 0.92) 0%, rgba(18, 11, 6, 0.0) 100%);
-    font-size: 0.54rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gold-pale);
-    text-align: center;
-  }
-
   .spread-card-slot.revealed {
     aspect-ratio: auto;
     background: linear-gradient(160deg, var(--comb) 0%, var(--bg) 100%);
@@ -2004,8 +1992,7 @@ function renderSpread() {
       slot.onclick = () => openCardFromList(card, 'spread');
     } else {
       slot.className = 'spread-card-slot unrevealed';
-      slot.innerHTML = `<img src="card_back.webp" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='<span class=&quot;spread-mark&quot;>✦</span>';">` +
-        `<div class="spread-slot-pos">${sp.positions[i].name}</div>`;
+      slot.innerHTML = `<img src="card_back.webp" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='<span class=&quot;spread-mark&quot;>✦</span>';">`;
       slot.onclick = () => {
         spreadRevealed[i] = true;
         logDraw(spreadCards[i], sp.title + ' · ' + sp.positions[i].name);
