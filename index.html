@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#120B06">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Honey Pot Oracle">
+<meta name="description" content="The Mystic Honey Pot Oracle — a 60-card sweetening oracle of magnetic attraction and folk magic.">
+<title>The Mystic Honey Pot Oracle</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23120B06'/%3E%3Cpath d='M32 8l18 10v20L32 48 14 38V18z' fill='none' stroke='%23E9A825' stroke-width='3'/%3E%3Cpath d='M32 20c-3 5-6 8-6 12a6 6 0 0012 0c0-4-3-7-6-12z' fill='%23E9A825'/%3E%3C/svg%3E">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500&display=swap');
+
+  :root {
+    --bg: #120B06;          /* smoked molasses */
+    --bg2: #1C120A;
+    --comb: #2C1B0E;        /* dark beeswax */
+    --comb-deep: #1F140A;
+    --ember: #B5482A;       /* cinnamon */
+    --gold: #E9A825;        /* golden honey */
+    --gold-glow: #FFCB57;
+    --gold-soft: #B97A1C;
+    --gold-pale: #F5DCA4;
+    --emerald: #1F5A44;     /* velvet emerald */
+    --white: #F8EEDC;       /* beeswax cream */
+    --white-dim: #CDB898;
+    --comb-line: rgba(233, 168, 37, 0.055);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--bg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64v33' fill='none' stroke='%23E9A825' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+    color: var(--white);
+    font-family: 'Jost', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  svg.ico { width: 1.35rem; height: 1.35rem; display: block; }
+
+  /* -- ACCESS SCREEN -- */
+  #access-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: radial-gradient(ellipse at 50% 34%, rgba(233, 168, 37, 0.16) 0%, rgba(31, 90, 68, 0.10) 32%, transparent 68%);
+    text-align: center;
+  }
+
+  .lock-icon {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 1.4rem;
+    color: var(--gold);
+    animation: pulse 2.8s ease-in-out infinite;
+  }
+
+  .lock-icon svg { width: 100%; height: 100%; }
+
+  @keyframes pulse {
+    0%, 100% { filter: drop-shadow(0 0 12px rgba(233, 168, 37, 0.45)); transform: scale(1); }
+    50% { filter: drop-shadow(0 0 30px rgba(255, 203, 87, 0.75)); transform: scale(1.05); }
+  }
+
+  .kicker {
+    font-size: 0.66rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+  }
+
+  #access-screen h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 7vw, 3rem);
+    line-height: 1.02;
+    color: var(--white);
+    margin-bottom: 0.9rem;
+    max-width: 13ch;
+  }
+
+  #access-screen h1 em {
+    display: block;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold-pale);
+    font-size: 0.62em;
+    margin-bottom: 0.15rem;
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--gold);
+    margin: 0 auto 0.9rem;
+    width: 180px;
+  }
+
+  .ornament::before, .ornament::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-soft));
+  }
+
+  .ornament::after { background: linear-gradient(90deg, var(--gold-soft), transparent); }
+  .ornament svg { width: 12px; height: 12px; }
+
+  #access-screen .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.08rem;
+    color: var(--gold-pale);
+    margin-bottom: 2.2rem;
+  }
+
+  .access-box {
+    background: rgba(44, 27, 14, 0.62);
+    border: 1px solid rgba(233, 168, 37, 0.3);
+    border-radius: 16px;
+    padding: 2rem 2.2rem;
+    max-width: 380px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  .access-box label {
+    display: block;
+    font-size: 0.74rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    margin-bottom: 0.5rem;
+  }
+
+  .access-help {
+    font-size: 0.72rem;
+    color: rgba(245, 220, 164, 0.55);
+    text-align: center;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .access-box input {
+    width: 100%;
+    background: rgba(18, 11, 6, 0.85);
+    border: 1px solid rgba(233, 168, 37, 0.38);
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.2rem;
+  }
+
+  .access-box input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(233, 168, 37, 0.25);
+  }
+
+  .btn-enter {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-glow) 0%, var(--gold) 45%, var(--gold-soft) 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 0.95rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #1B1006;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-enter:hover {
+    box-shadow: 0 0 25px rgba(233, 168, 37, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .error-msg {
+    color: #E8876A;
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+    display: none;
+  }
+
+  .access-footer {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    color: rgba(205, 184, 152, 0.42);
+    letter-spacing: 0.14em;
+  }
+
+  /* -- MAIN APP -- */
+  #app {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(180deg, var(--comb) 0%, transparent 100%);
+    padding: 1.1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    border-bottom: 1px solid rgba(233, 168, 37, 0.16);
+  }
+
+  header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(1.2rem, 4vw, 1.55rem);
+    line-height: 1.1;
+    color: var(--white);
+  }
+
+  header .deck-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+
+  .card-counter {
+    flex: 0 0 auto;
+    font-size: 0.72rem;
+    color: var(--gold-pale);
+    letter-spacing: 0.1em;
+    background: rgba(233, 168, 37, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(233, 168, 37, 0.24);
+    white-space: nowrap;
+  }
+
+  /* -- DECK VIEW -- */
+  #deck-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    background: radial-gradient(ellipse at 50% 42%, rgba(233, 168, 37, 0.13) 0%, transparent 58%);
+  }
+
+  .deck-pile {
+    position: relative;
+    width: 200px;
+    height: 346px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .deck-pile:hover { transform: scale(1.03) translateY(-4px); }
+
+  .deck-card {
+    position: absolute;
+    width: 200px;
+    height: 346px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #f5e6c8 0%, #ecd9b2 60%, #cfae74 100%);
+    border: 2px solid rgba(233, 168, 37, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .deck-card:nth-child(1) { transform: rotate(-6deg) translate(-12px, 10px); opacity: 0.45; filter: brightness(0.7); }
+  .deck-card:nth-child(2) { transform: rotate(-3deg) translate(-6px, 5px); opacity: 0.65; filter: brightness(0.82); }
+  .deck-card:nth-child(3) { transform: rotate(3deg) translate(6px, 3px); opacity: 0.8; filter: brightness(0.9); }
+  .deck-card:nth-child(4) { transform: rotate(0deg); box-shadow: 0 14px 44px rgba(0, 0, 0, 0.7), 0 0 46px rgba(233, 168, 37, 0.3); }
+
+  .deck-card img { width: 100%; height: 100%; object-fit: cover; }
+
+  .deck-mark {
+    font-size: 3.2rem;
+    color: #2a1a0b;
+    opacity: 0.7;
+  }
+
+  .deck-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 10px;
+    padding: 0.78rem 1.8rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold-glow) 0%, var(--gold) 45%, var(--gold-soft) 100%);
+    color: #1B1006;
+    box-shadow: 0 4px 20px rgba(233, 168, 37, 0.24);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 4px 30px rgba(233, 168, 37, 0.48);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(44, 27, 14, 0.72);
+    color: var(--gold-pale);
+    border: 1px solid rgba(233, 168, 37, 0.34);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(44, 27, 14, 0.95);
+    border-color: var(--gold);
+    color: var(--white);
+  }
+
+  .deck-hint {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--white-dim);
+    opacity: 0.75;
+    text-align: center;
+  }
+
+  /* -- DRAWN CARD -- */
+  #card-view {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .card-scene {
+    perspective: 1000px;
+    width: min(320px, 85vw);
+    cursor: pointer;
+  }
+
+  .card-inner {
+    width: 100%;
+    position: relative;
+    transition: transform 0.15s ease;
+  }
+
+  .card-inner:active { transform: scale(0.97); }
+
+  .card-face, .card-back {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 54px rgba(233, 168, 37, 0.24);
+    border: 2px solid rgba(233, 168, 37, 0.5);
+  }
+
+  .card-back {
+    aspect-ratio: 0.579;
+    background: linear-gradient(145deg, #f5e6c8 0%, #ecd9b2 60%, #cfae74 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .card-back.has-image { background: none; padding: 0; }
+
+  .card-back.has-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card-back .tap-hint {
+    position: absolute;
+    left: 0; right: 0; bottom: 9%;
+    font-size: 0.7rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(42, 26, 11, 0.7);
+    text-align: center;
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  .card-back .mark-large {
+    font-size: 4.5rem;
+    color: #2a1a0b;
+    opacity: 0.75;
+  }
+
+  .card-back.has-image .mark-large { display: none; }
+
+  @keyframes blink {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 1; }
+  }
+
+  .card-face {
+    display: none;
+    position: relative;
+    background: #000;
+    animation: reveal 0.55s ease;
+  }
+
+  @keyframes reveal {
+    0% { transform: rotateY(90deg) scale(0.96); opacity: 0.4; }
+    100% { transform: rotateY(0) scale(1); opacity: 1; }
+  }
+
+  .card-face img { width: 100%; display: block; }
+
+  /* -- Reading panel -- */
+  .reading-hint {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    opacity: 0.65;
+    text-align: center;
+  }
+
+  .reading-panel {
+    width: min(360px, 90vw);
+    background: linear-gradient(170deg, rgba(44, 27, 14, 0.78) 0%, rgba(28, 18, 10, 0.78) 100%);
+    border: 1px solid rgba(233, 168, 37, 0.28);
+    border-radius: 16px;
+    padding: 1.5rem 1.4rem 1.2rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .reading-category {
+    font-size: 0.62rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 0.35rem;
+    font-weight: 500;
+  }
+
+  .reading-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: clamp(1.45rem, 5.5vw, 1.8rem);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .reading-keywords {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--gold-pale);
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid rgba(233, 168, 37, 0.22);
+  }
+
+  .card-section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.9;
+    margin-bottom: 0.35rem;
+    margin-top: 1rem;
+  }
+
+  .card-section-label:first-of-type { margin-top: 0; }
+
+  .card-message {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.42;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .card-meaning {
+    font-size: 0.84rem;
+    line-height: 1.68;
+    color: var(--white-dim);
+  }
+
+  .card-reflection {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    color: var(--gold-pale);
+    border-left: 2px solid var(--gold);
+    padding-left: 0.8rem;
+    margin-top: 0.3rem;
+  }
+
+  .card-affirmation {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: var(--gold-glow);
+    text-align: center;
+    margin-top: 1.1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(233, 168, 37, 0.22);
+  }
+
+  .card-footer-brand {
+    margin-top: 1rem;
+    padding-top: 0.6rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(205, 184, 152, 0.36);
+    text-align: center;
+  }
+
+  .card-view-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-info-bar {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.74rem;
+    color: var(--white-dim);
+    opacity: 0.6;
+  }
+
+  /* -- ALL CARDS VIEW -- */
+  #all-cards-view {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .search-bar {
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+    border-bottom: 1px solid rgba(233, 168, 37, 0.1);
+  }
+
+  .search-bar input {
+    width: 100%;
+    background: rgba(44, 27, 14, 0.6);
+    border: 1px solid rgba(233, 168, 37, 0.28);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.86rem;
+    color: var(--white);
+    outline: none;
+  }
+
+  .search-bar input::placeholder { color: rgba(205, 184, 152, 0.42); }
+  .search-bar input:focus { border-color: var(--gold); }
+
+  .category-tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .category-tabs::-webkit-scrollbar { display: none; }
+
+  .cat-tab {
+    white-space: nowrap;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    padding: 0.42rem 0.95rem;
+    border-radius: 20px;
+    border: 1px solid rgba(233, 168, 37, 0.22);
+    color: var(--white-dim);
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .cat-tab.active, .cat-tab:hover {
+    background: rgba(233, 168, 37, 0.18);
+    border-color: var(--gold);
+    color: var(--white);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 1rem 1.5rem 2rem;
+    overflow-y: auto;
+  }
+
+  .mini-card {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    background: rgba(44, 27, 14, 0.6);
+    border: 1px solid rgba(233, 168, 37, 0.17);
+    border-radius: 12px;
+    padding: 0.7rem 0.9rem 0.7rem 0.7rem;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+
+  .mini-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(233, 168, 37, 0.18);
+    transform: translateY(-2px);
+  }
+
+  .mini-thumb {
+    width: 48px;
+    flex: 0 0 48px;
+    aspect-ratio: 0.579;
+    border-radius: 5px;
+    object-fit: cover;
+    background: rgba(233, 168, 37, 0.08);
+  }
+
+  .mini-body { min-width: 0; flex: 1; }
+
+  .mini-card-num {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+  }
+
+  .mini-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.12rem;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+    line-height: 1.15;
+  }
+
+  .mini-card-truth {
+    font-size: 0.74rem;
+    color: var(--white-dim);
+    opacity: 0.75;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* -- JOURNAL -- */
+  #history-view {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.2rem 1.5rem 2rem;
+    gap: 1rem;
+    overflow-y: auto;
+  }
+
+  .history-summary {
+    background: rgba(44, 27, 14, 0.62);
+    border: 1px solid rgba(233, 168, 37, 0.26);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+  }
+
+  .history-summary-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.6rem;
+  }
+
+  .history-count {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--white);
+  }
+
+  .history-count span {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    opacity: 0.78;
+    margin-left: 0.4rem;
+  }
+
+  .history-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.35rem;
+  }
+
+  .history-repeat {
+    font-size: 0.8rem;
+    color: var(--white-dim);
+    line-height: 1.7;
+  }
+
+  .history-repeat b {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .history-day {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    opacity: 0.72;
+    margin: 0.6rem 0 0.1rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid rgba(233, 168, 37, 0.17);
+  }
+
+  .history-entry {
+    display: flex;
+    gap: 0.7rem;
+    padding: 0.7rem 0 0.5rem;
+    border-bottom: 1px solid rgba(233, 168, 37, 0.08);
+  }
+
+  .history-thumb {
+    width: 42px;
+    flex: 0 0 42px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgba(233, 168, 37, 0.08);
+  }
+
+  .history-body { flex: 1; min-width: 0; }
+
+  .history-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .history-meta {
+    font-size: 0.66rem;
+    color: var(--white-dim);
+    opacity: 0.62;
+    margin-bottom: 0.35rem;
+  }
+
+  .history-note {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed rgba(233, 168, 37, 0.28);
+    padding: 0.2rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--gold-pale);
+    outline: none;
+  }
+
+  .history-note::placeholder { color: rgba(205, 184, 152, 0.34); font-style: italic; }
+  .history-note:focus { border-bottom-color: var(--gold); }
+
+  .history-empty {
+    text-align: center;
+    color: var(--white-dim);
+    opacity: 0.68;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 2.5rem 1rem;
+  }
+
+  .history-actions {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+  }
+
+  .history-actions .btn { padding: 0.6rem 1.2rem; font-size: 0.7rem; }
+
+  .history-actions .btn-danger {
+    background: rgba(181, 72, 42, 0.92);
+    border-color: #E8876A;
+    color: var(--white);
+  }
+
+  .history-hint {
+    font-size: 0.64rem;
+    color: var(--white-dim);
+    opacity: 0.5;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* -- NAV BAR -- */
+  nav {
+    display: flex;
+    background: rgba(18, 11, 6, 0.95);
+    border-top: 1px solid rgba(233, 168, 37, 0.17);
+    padding: 0.45rem 0 calc(0.45rem + env(safe-area-inset-bottom));
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.28rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Jost', sans-serif;
+    color: rgba(205, 184, 152, 0.45);
+  }
+
+  .nav-btn .nav-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .nav-btn.active, .nav-btn:hover { color: var(--gold-pale); }
+  .nav-btn.active .ico { color: var(--gold); filter: drop-shadow(0 0 6px rgba(233, 168, 37, 0.7)); }
+
+  /* -- ANIMATIONS -- */
+  @keyframes shuffle {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    20%  { transform: translate(-15px, -5px) rotate(-5deg); }
+    40%  { transform: translate(15px, -8px) rotate(5deg); }
+    60%  { transform: translate(-8px, 5px) rotate(-2deg); }
+    80%  { transform: translate(8px, 3px) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+
+  .shuffling .deck-card:nth-child(4) { animation: shuffle 0.6s ease-in-out 3; }
+
+  /* -- SPREAD VIEW -- */
+  #spread-view {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    overflow-y: auto;
+  }
+
+  .spread-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .spread-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.9;
+    text-align: center;
+    margin-top: -1.1rem;
+  }
+
+  .spread-picker {
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .spread-picker-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    opacity: 0.8;
+  }
+
+  .spread-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .spread-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(233, 168, 37, 0.3);
+    user-select: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    padding: 0.5rem 0.95rem;
+    border-radius: 22px;
+    border: 1px solid rgba(233, 168, 37, 0.34);
+    background: rgba(44, 27, 14, 0.62);
+    color: var(--white-dim);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .spread-tab-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+    background: rgba(233, 168, 37, 0.18);
+    color: var(--gold-pale);
+    font-size: 0.64rem;
+    line-height: 1;
+  }
+
+  .spread-tab:hover {
+    border-color: var(--gold);
+    color: var(--white);
+    transform: translateY(-1px);
+  }
+
+  .spread-tab.active {
+    background: linear-gradient(135deg, var(--gold-glow) 0%, var(--gold) 45%, var(--gold-soft) 100%);
+    border-color: var(--gold);
+    color: #1B1006;
+    font-weight: 500;
+    box-shadow: 0 2px 14px rgba(233, 168, 37, 0.32);
+  }
+
+  .spread-tab.active .spread-tab-num {
+    background: rgba(18, 11, 6, 0.3);
+    color: var(--white);
+  }
+
+  .spread-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.02rem;
+    color: var(--white-dim);
+    opacity: 0.82;
+    text-align: center;
+    max-width: 460px;
+    line-height: 1.45;
+    margin-top: -0.6rem;
+  }
+
+  .spread-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .spread-card-slot {
+    aspect-ratio: 0.579;
+    border-radius: 10px;
+    border: 1px solid rgba(233, 168, 37, 0.3);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+
+  .spread-card-slot.unrevealed {
+    background: linear-gradient(145deg, #f5e6c8 0%, #ecd9b2 60%, #cfae74 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .spread-card-slot.unrevealed:hover {
+    box-shadow: 0 0 20px rgba(233, 168, 37, 0.42);
+    transform: translateY(-3px);
+  }
+
+  .spread-slot-pos {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 0.9rem 0.3rem 0.4rem;
+    background: linear-gradient(0deg, rgba(18, 11, 6, 0.92) 0%, rgba(18, 11, 6, 0.0) 100%);
+    font-size: 0.54rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    text-align: center;
+  }
+
+  .spread-card-slot.revealed {
+    aspect-ratio: auto;
+    background: linear-gradient(160deg, var(--comb) 0%, var(--bg) 100%);
+    border-color: rgba(233, 168, 37, 0.48);
+    padding: 0.55rem 0.5rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spread-slot-img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 0.45rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .spread-slot-read {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.9;
+    margin-top: auto;
+    padding-top: 0.3rem;
+  }
+
+  .spread-slot-label {
+    font-size: 0.56rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+
+  .spread-slot-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 0.86rem;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 0.2rem;
+  }
+
+  .spread-slot-hint {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.74rem;
+    color: var(--white-dim);
+    opacity: 0.72;
+    line-height: 1.25;
+    margin-bottom: 0.3rem;
+  }
+
+  .spread-mark { font-size: 1.6rem; color: #2a1a0b; opacity: 0.6; }
+
+  @media (max-width: 380px) {
+    .spread-grid { gap: 0.5rem; }
+    .btn { padding: 0.72rem 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-jar" viewBox="0 0 64 64">
+      <path d="M22 10h20M24 10v6c-6 3-10 8-10 15v15c0 5 4 8 9 8h18c5 0 9-3 9-8V31c0-7-4-12-10-15v-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M20 8h24" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M17 33c5 3 10-2 15 1s10 2 15-1v13c0 3-3 5-6 5H23c-3 0-6-2-6-5z" fill="currentColor" opacity="0.85"/>
+      <path d="M44 4l8 8M47 14c2-2 4-1 5 0s2 3 0 5-3 2-5 0-2-3 0-5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M32 21l1.3 2.7 2.7 1.3-2.7 1.3L32 29l-1.3-2.7L28 25l2.7-1.3z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-diamond" viewBox="0 0 12 12"><path d="M6 0l6 6-6 6-6-6z" fill="currentColor"/></symbol>
+    <symbol id="i-pull" viewBox="0 0 24 24">
+      <rect x="6.5" y="3.5" width="11" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M4 6.5v12a2 2 0 002 2M20 6.5v12a2 2 0 01-2 2" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.6"/>
+      <path d="M12 8.5l1 2.1 2.2 1-2.2 1L12 14.8l-1-2.2-2.2-1 2.2-1z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-spread" viewBox="0 0 24 24">
+      <rect x="1.8" y="6" width="6" height="10" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="9" y="4" width="6" height="10" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="16.2" y="6" width="6" height="10" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M5 19.5h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24">
+      <path d="M7 3.5l3.5 2v4L7 11.5l-3.5-2v-4zM17 3.5l3.5 2v4L17 11.5l-3.5-2v-4zM12 12.5l3.5 2v4L12 20.5l-3.5-2v-4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-journal" viewBox="0 0 24 24">
+      <path d="M6 3.5h11a1.5 1.5 0 011.5 1.5v15H7a2 2 0 01-2-2V4.5a1 1 0 011-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M5 18a2 2 0 012-2h11.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M12 6.8c-1.2 1.8-2.3 3-2.3 4.3a2.3 2.3 0 004.6 0c0-1.3-1.1-2.5-2.3-4.3z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ACCESS SCREEN -->
+<div id="access-screen">
+  <div class="lock-icon"><svg><use href="#i-jar"/></svg></div>
+  <p class="kicker">A 60-Card Sweetening Oracle</p>
+  <h1><em>The Mystic</em>Honey Pot Oracle</h1>
+  <div class="ornament"><svg><use href="#i-diamond"/></svg></div>
+  <p class="subtitle">Magnetic attraction &amp; folk magic</p>
+
+  <div class="access-box">
+    <label for="code-input">Enter Your Access Code</label>
+    <p class="access-help">Type your code, then tap Unlock</p>
+    <input type="text" id="code-input" placeholder="" maxlength="20"
+      autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false">
+    <button class="btn-enter" onclick="checkCode()">Unlock the Jar</button>
+    <div class="error-msg" id="error-msg">That code didn't open the jar. Check it and try again.</div>
+  </div>
+
+  <p class="access-footer">PsychicSoulStar · The Mystic Honey Pot Oracle</p>
+</div>
+
+<!-- MAIN APP -->
+<div id="app">
+  <header>
+    <div>
+      <span class="deck-badge">60-Card Sweetening Oracle</span>
+      <h1>The Mystic Honey Pot</h1>
+    </div>
+    <span class="card-counter" id="counter">60 Cards</span>
+  </header>
+
+  <!-- DECK VIEW -->
+  <div id="deck-view">
+    <div class="deck-pile" id="deck-pile" onclick="drawCard()">
+      <div class="deck-card"></div>
+      <div class="deck-card"></div>
+      <div class="deck-card"></div>
+      <div class="deck-card">
+        <img src="card_back.webp" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="deck-mark" style="display:none;">✦</span>
+      </div>
+    </div>
+    <div class="deck-actions">
+      <button class="btn btn-primary" onclick="shuffleDeck()">✦ Shuffle</button>
+      <button class="btn btn-secondary" onclick="drawCard()">Pull a Card</button>
+    </div>
+    <p class="deck-hint">Hold your wish in mind, then tap the deck</p>
+  </div>
+
+  <!-- DRAWN CARD VIEW -->
+  <div id="card-view">
+    <div class="card-scene" id="card-scene" onclick="flipCard()">
+      <div class="card-inner" id="card-inner">
+        <div class="card-back has-image" id="card-back-el">
+          <img src="card_back.webp" alt="The Mystic Honey Pot Oracle — card back" onerror="this.parentElement.classList.remove('has-image'); this.remove();">
+          <span class="mark-large">✦</span>
+          <span class="tap-hint">Tap to reveal</span>
+        </div>
+        <div class="card-face" id="card-face"></div>
+      </div>
+    </div>
+
+    <p class="reading-hint" id="reading-hint" style="display:none;">Scroll down for the full reading</p>
+
+    <div class="reading-panel" id="reading-panel" style="display:none;"></div>
+
+    <div class="card-info-bar">
+      <span id="drawn-count">Card pulled</span>
+      <span>·</span>
+      <span>Tap card to reveal</span>
+    </div>
+
+    <div class="card-view-actions" id="card-view-actions"></div>
+  </div>
+
+  <!-- ALL CARDS VIEW -->
+  <div id="all-cards-view">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search all 60 cards — honey, love, money..."
+        oninput="filterCards()" autocomplete="off">
+    </div>
+    <div class="category-tabs" id="cat-tabs"></div>
+    <div class="cards-grid" id="cards-grid"></div>
+  </div>
+
+  <!-- JOURNAL VIEW -->
+  <div id="history-view">
+    <div class="history-summary" id="history-summary"></div>
+    <div class="history-list" id="history-list"></div>
+    <div class="history-actions">
+      <button type="button" class="btn btn-secondary" onclick="exportHistory(this)">Copy my journal</button>
+      <button type="button" class="btn btn-secondary" onclick="clearHistory(this)">Clear</button>
+    </div>
+    <p class="history-hint">Saved on this device only. Clearing your browser data erases it —
+      use Copy my journal to keep a permanent record.</p>
+  </div>
+
+  <!-- SPREAD VIEW -->
+  <div id="spread-view">
+    <div class="spread-picker">
+      <span class="spread-picker-label">Choose a spread</span>
+      <div class="spread-tabs" id="spread-tabs">
+      <button type="button" class="spread-tab" data-spread="0"><span class="spread-tab-num">1</span>The Daily Drop</button>
+      <button type="button" class="spread-tab active" data-spread="1"><span class="spread-tab-num">3</span>Ingredient, Spell &amp; Harvest</button>
+      <button type="button" class="spread-tab" data-spread="2"><span class="spread-tab-num">3</span>Sweeten the Heart</button>
+      <button type="button" class="spread-tab" data-spread="3"><span class="spread-tab-num">4</span>The Honey Jar</button>
+      <button type="button" class="spread-tab" data-spread="4"><span class="spread-tab-num">5</span>The Sugar Jar Spell</button>
+      </div>
+    </div>
+    <p class="spread-title" id="spread-title"></p>
+    <p class="spread-subtitle" id="spread-subtitle"></p>
+    <div class="spread-grid" id="spread-grid"></div>
+    <p class="spread-note" id="spread-note"></p>
+    <button class="btn btn-primary" onclick="newSpread()">New Spread</button>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav>
+    <button class="nav-btn active" id="nav-deck" onclick="switchView('deck')">
+      <svg class="ico"><use href="#i-pull"/></svg>
+      <span class="nav-label">Pull</span>
+    </button>
+    <button class="nav-btn" id="nav-spread" onclick="switchView('spread')">
+      <svg class="ico"><use href="#i-spread"/></svg>
+      <span class="nav-label">Spreads</span>
+    </button>
+    <button class="nav-btn" id="nav-all" onclick="switchView('all')">
+      <svg class="ico"><use href="#i-grid"/></svg>
+      <span class="nav-label">All 60</span>
+    </button>
+    <button class="nav-btn" id="nav-history" onclick="switchView('history')">
+      <svg class="ico"><use href="#i-journal"/></svg>
+      <span class="nav-label">Journal</span>
+    </button>
+  </nav>
+</div>
+
+<script>
+
+// -- CARD DATA --
+const CATEGORIES = ["The Sweet Elements", "The Magnetic Spells", "The Siren's Aura", "The Honeyed Harvest"];
+
+const CAT_TABS = ["✦ Sweet Elements", "◆ Magnetic Spells", "❖ Siren's Aura", "✵ Honeyed Harvest"];
+
+const CARDS = [
+  {"id": 1, "cat": 0, "name": "THE GOLDEN HONEY", "keywords": "Sweet love · Softened hearts · Reconciliation · Irresistible charm", "message": "Sweetness flows effortlessly into your life. Hearts soften, walls come down, and you become absolutely irresistible.", "meaning": "Honey is the oldest sweetener in folk magic, and it is poured here without effort. The Golden Honey says a hard situation is ready to soften — a cold partner, a strained friendship, a door that was shut. Lead with warmth rather than argument. The walls you have been pushing against will come down faster through kindness than through force.", "reflection": "Where have I been arguing when a little sweetness would open the door faster?", "affirmation": "Sweetness flows to me, and hearts soften in my presence."},
+  {"id": 2, "cat": 0, "name": "THE ROSE PETALS", "keywords": "Romance · Desire · New love · Rekindled passion", "message": "Divine romance is awakening. Open your heart to receive the passionate and devoted love you truly deserve.", "meaning": "Rose petals belong in every love working because they call romance by name. This card announces that passion is waking up — either a new admirer stepping closer or an old flame catching again. Make room for it. Dress up for no reason, say the tender thing out loud, and stop downplaying how much love you actually want.", "reflection": "What kind of love am I ready to receive, and have I said so honestly?", "affirmation": "I am open to devoted, passionate love, and I deserve it."},
+  {"id": 3, "cat": 0, "name": "THE CINNAMON STICK", "keywords": "Speed · Fast money · Prosperity · Heating up", "message": "Prosperity is accelerating. The energy is heating up, bringing swift financial blessings and rapid success to your doorstep.", "meaning": "Cinnamon is the folk worker's accelerator — a pinch is added to any jar to make it move faster. Money and success are speeding toward you now. The opportunity you have been waiting on is heating up, so be ready to answer quickly: send the invoice, follow up on the offer, say yes before the window cools.", "reflection": "What would I do today if I truly believed the money was already on its way?", "affirmation": "Prosperity moves toward me swiftly, and I am ready to receive it."},
+  {"id": 4, "cat": 0, "name": "THE SUGAR CUBE", "keywords": "Favor · Sweet words · Compliments · Smooth negotiation", "message": "Every word you speak is laced with sugar. Favor and sweet opportunities are naturally drawn to your magnetic presence.", "meaning": "A sugar cube melts slowly and sweetens everything it touches. This card brings favor in conversation — praise, an easy yes, a negotiation that tilts your way. Your words carry extra grace right now, so use them. Ask for the better rate, pay the sincere compliment, and let your tone do half the work.", "reflection": "Which conversation would go better if I brought more sweetness to it?", "affirmation": "My words are laced with sugar, and favor follows me."},
+  {"id": 5, "cat": 0, "name": "THE LAVENDER SPRIG", "keywords": "Peace · Calm energy · Cleansing · Ease", "message": "Peace is your ultimate magnet. Cultivate a calm spirit, and watch how easily good things gravitate towards your serene energy.", "meaning": "Lavender calms the room and clears out heavy energy. The Lavender Sprig says your peace is your strongest pull right now. People and opportunities relax around you when you are not anxious or grasping. Step back from the chase, breathe, and tidy your inner space. Calm is not passive here — it is magnetic.", "reflection": "What am I chasing so hard that it can feel me pushing?", "affirmation": "My calm spirit draws good things to me with ease."},
+  {"id": 6, "cat": 0, "name": "THE VANILLA BEAN", "keywords": "Comfort · Familiarity · Safe haven · Longing", "message": "Comfort and nostalgia intertwine. You are becoming a safe haven, drawing people in with your warm and familiar embrace.", "meaning": "Vanilla smells like home, and this card makes you someone's comfort place. People are drawn in by your warmth and the safety they feel near you. If you are waiting on someone, they may be missing that feeling right now. Keep your energy soft and familiar. Nostalgia is working in your favor.", "reflection": "How do I make the people I love feel safe and at home with me?", "affirmation": "I am a warm and safe haven, and love returns to me."},
+  {"id": 7, "cat": 0, "name": "THE BROWN SUGAR", "keywords": "Lasting love · Steady wealth · Foundations · Patience", "message": "Deep, grounded, and rich. Focus on building lasting foundations in love and wealth; your steady efforts are sweetening the long-term results.", "meaning": "Brown sugar is richer and slower than white — it sweetens deeply over time. This card favors the long game: a steady relationship rather than a fling, wealth that builds rather than spikes. Keep doing the consistent, unglamorous work. What you are building now will hold, and its sweetness will deepen every season.", "reflection": "What foundation am I building that needs patience rather than speed?", "affirmation": "My steady efforts are sweetening everything I build."},
+  {"id": 8, "cat": 0, "name": "THE CLOVE", "keywords": "Protection · Blocking jealousy · Guarding love · Pure resources", "message": "Your blessings are fiercely protected. Any negativity or jealousy is blocked, keeping your relationships and resources pure and untouched.", "meaning": "Clove is a guardian spice used to stop gossip and turn away envy. This card wraps your love and your money in protection. If someone has been circling your relationship or watching your success with a sour eye, their influence is being blocked. Keep your plans private for now and trust that what is yours stays yours.", "reflection": "What am I sharing too freely that would be safer kept close?", "affirmation": "My blessings are protected, and jealousy cannot touch them."},
+  {"id": 9, "cat": 0, "name": "THE MINT LEAF", "keywords": "Fresh start · Clear talk · New money · Renewal", "message": "Fresh starts and clear communication. The air is cleared, allowing new financial opportunities and revitalized connections to bloom.", "meaning": "Mint clears the air and wakes up stale energy. A fresh start is here — a conversation that finally clears things up, or a new stream of money appearing suddenly. Let go of the old resentment and speak plainly. Once the air is clean, new opportunities and renewed connections have room to grow.", "reflection": "What stale feeling am I ready to clear so something new can grow?", "affirmation": "The air is clear, and fresh blessings bloom around me."},
+  {"id": 10, "cat": 0, "name": "THE ORANGE PEEL", "keywords": "Joy · Good news · Open doors · Positive energy", "message": "Joy is your ultimate attractor. Radiate happiness and positivity, and watch as doors open and good news arrives effortlessly.", "meaning": "Orange peel brings brightness and good fortune into any working. Your joy is the strongest attraction you have right now. People want to be near happiness, and they bring opportunities with them. Do what lights you up, smile first, and expect good news. Doors open faster for someone who is visibly enjoying life.", "reflection": "What brings me real joy, and how can I do more of it this week?", "affirmation": "My joy attracts good news, open doors and good people."},
+  {"id": 11, "cat": 0, "name": "THE CHAMOMILE", "keywords": "Forgiveness · Softening · Calm resolution · Gentle power", "message": "Tension melts away. Soften your approach and allow forgiveness to flow. Gentle energy will win the battle you are currently facing.", "meaning": "Chamomile soothes nerves and cools a heated temper. This card says the tension is ready to melt. If someone is angry or proud, a gentle approach will win where pressure would fail. Offer the olive branch, lower your voice, or forgive what you are able to. Softness is the winning strategy here.", "reflection": "Where would a gentler approach get me further than being right?", "affirmation": "I soften, I forgive, and gentle energy carries me to victory."},
+  {"id": 12, "cat": 0, "name": "THE NUTMEG", "keywords": "Unexpected luck · Mystery · Allure · Calculated risk", "message": "Unexpected luck and mystical charm surround you. Take a calculated risk, for the odds are mysteriously shifting in your favor.", "meaning": "Nutmeg is the gambler's charm, carried for luck and a little mystery. The odds are shifting in your favor in ways you cannot fully see. This is a good moment for a well-judged risk — the application, the bold message, the small bet on yourself. Your mysterious charm is also unusually strong right now.", "reflection": "What calculated risk have I been putting off that luck now favors?", "affirmation": "Luck surrounds me, and the odds shift in my favor."},
+  {"id": 13, "cat": 0, "name": "THE APPLE", "keywords": "Temptation · Desire · Passion · Allure", "message": "Temptation and passionate desires are at play. You hold the forbidden fruit of allure; use your magnetic charm wisely.", "meaning": "The apple is the oldest symbol of temptation. This card brings strong desire and attraction into play — yours and theirs. You hold real allure right now, and someone is very aware of it. Enjoy the heat, but choose with your eyes open. Use your charm in ways you will still feel good about tomorrow.", "reflection": "What do I truly desire, and am I choosing it with clear eyes?", "affirmation": "I hold the fruit of allure, and I use my charm wisely."},
+  {"id": 14, "cat": 0, "name": "THE FLORIDA WATER", "keywords": "Cleansing · Clearing · Fresh energy · Making space", "message": "Cleanse your aura and your space. Removing stagnant energy makes room for sweet blessings and pure love to enter.", "meaning": "Florida Water is the classic cologne for clearing a room and a spirit. Before sweetness can come in, the old energy has to go out. Cleanse your space, your aura and your habits — open the windows, clear the clutter, end the draining conversation. Love and blessings arrive more easily in a clean, bright house.", "reflection": "What stagnant energy in my space or life needs clearing now?", "affirmation": "I clear what is stale, and sweet blessings fill the space."},
+  {"id": 15, "cat": 0, "name": "THE CRYSTAL JAR", "keywords": "Focus · Container · Manifestation · Holding power", "message": "You are the vessel of your own desires. Contain your energy, focus your intentions, and watch your manifestations sweeten and grow.", "meaning": "Every sweetening working needs a vessel, and here the vessel is you. The Crystal Jar asks you to contain your energy and focus your intentions instead of scattering them. Pick one clear desire and give it your attention every day. What you hold steadily, you grow. This card completes the Sweet Elements.", "reflection": "If I put only one wish in my jar right now, what would it be?", "affirmation": "I am the vessel of my desires, and what I focus on grows."},
+  {"id": 16, "cat": 1, "name": "THE PETITION PAPER", "keywords": "Clarity · Intention · Written wishes · Asking clearly", "message": "Write your desires with absolute clarity. The universe is ready to read your petition and bring it to life.", "meaning": "In folk magic the petition is written before anything else, because the work needs a clear target. This card asks you to name exactly what you want. Vague wishes get vague results. Write it down in plain words — the person, the amount, the outcome, the date. The universe is ready to answer a clear request.", "reflection": "If I wrote my desire in one exact sentence, what would it say?", "affirmation": "I name my desires clearly, and the universe brings them to life."},
+  {"id": 17, "cat": 1, "name": "THE CROSSING OF NAMES", "keywords": "Soul connection · Being on their mind · Intertwined paths · Strong bond", "message": "Your names are spiritually intertwined. You are commanding their thoughts, creating an unbreakable bond of sweet obsession.", "meaning": "Writing two names crossed over each other is the classic way to tie two people together. This card says your names are spiritually linked right now. You are on their mind more than you realize, and the bond between you is strengthening. Keep your intention loving and honest, and let the connection draw them closer.", "reflection": "What do I truly want this connection to become, for both of us?", "affirmation": "Our paths are woven together, and love draws us closer."},
+  {"id": 18, "cat": 1, "name": "THE CANDLE DRESSING", "keywords": "Preparation · Intention · Focus · Empowerment", "message": "Anoint your intentions with power. Preparation is key; dress your path with focus, and the flames of success will burn brighter.", "meaning": "Before a candle is lit, it is dressed with oil and herbs to load it with purpose. This card says preparation is the magic right now. Plan the presentation, rehearse the conversation, set your intention before you act. The more focus you pour in at the start, the brighter and faster the result will burn.", "reflection": "What preparation would make my next step far more powerful?", "affirmation": "I anoint my path with focus, and my success burns brighter."},
+  {"id": 19, "cat": 1, "name": "THE WAX SEAL", "keywords": "Sealed deal · Confirmation · Done · Victory", "message": "The spell is cast, the deal is closed. Your manifestation is sealed with divine authority and cannot be undone.", "meaning": "Wax seals the jar and closes the work. This card confirms that something is settled: the deal closes, the answer comes back yes, the matter is decided. Stop reopening it in your head. Act as if it is done, because energetically it is. Your victory is sealed and does not need defending.", "reflection": "What outcome can I stop worrying over and simply accept as done?", "affirmation": "My blessing is sealed, and what is mine cannot be undone."},
+  {"id": 20, "cat": 1, "name": "THE MIDNIGHT STIR", "keywords": "Behind the scenes · Quiet progress · Patience · Hidden movement", "message": "Behind the scenes, the energy is shifting. Keep stirring your intentions gently; the magic is working in the quiet hours.", "meaning": "Many workings are tended at midnight, out of sight. The Midnight Stir says things are moving even though you cannot see it yet. Do not mistake silence for failure. Keep stirring gently — small daily actions, quiet prayers, steady intention — and trust that the magic is working in the quiet hours.", "reflection": "What small daily action keeps my intention alive while I wait?", "affirmation": "The magic is working quietly, and I keep stirring with faith."},
+  {"id": 21, "cat": 1, "name": "THE SPOKEN WORD", "keywords": "Power of words · Speaking life · Declaration · Watching your tongue", "message": "Your voice commands reality. Speak life, love, and abundance into existence, for your words carry heavy magnetic weight.", "meaning": "Spoken words carry magnetic weight in every tradition. This card tells you to speak deliberately. Say the good thing out loud, declare what you are calling in, and stop rehearsing the worst-case version to anyone who will listen. Your words are especially powerful right now, so point them in the right direction.", "reflection": "What have I been saying out loud that works against what I want?", "affirmation": "I speak life, love and abundance, and my words come true."},
+  {"id": 22, "cat": 1, "name": "THE SECRET BURIAL", "keywords": "Letting go · Trust · Planting seeds · Faith in the process", "message": "Plant the seed and let it be. Trust that what you have buried in the spiritual realm is currently growing roots in reality.", "meaning": "Some workings are buried in the earth and then left alone. This card asks you to release the outcome. You have done the work; now stop digging it up to check on it. Constant checking disturbs the roots. Trust that what you planted is growing, and turn your attention to living your life.", "reflection": "What have I already done my part on that I now need to leave alone?", "affirmation": "I release my wish to the earth, and I trust it is growing."},
+  {"id": 23, "cat": 1, "name": "BENEATH THE BED", "keywords": "Subconscious · Dreams · Deep influence · Quiet connection", "message": "Deep subconscious work is at play. Your influence is infiltrating their dreams and settling into the foundation of their mind.", "meaning": "Workings placed beneath the bed act on dreams and the deep mind. This card points to influence beneath the surface — someone dreaming of you, or your own subconscious reshaping your beliefs. Pay attention to your dreams this week. Feed your mind good things before sleep, because what settles in quietly is taking root now.", "reflection": "What am I telling myself just before sleep, and is it helping me?", "affirmation": "My deep mind works for me, and my influence settles gently."},
+  {"id": 24, "cat": 1, "name": "THE HEAT APPLICATION", "keywords": "Heat · Passion · Pressure · Fast results", "message": "The temperature is rising. Apply pressure and passion; the situation is heating up to deliver immediate, fiery results.", "meaning": "Heating a jar or burning a candle on top of it speeds the work along. The temperature is rising. Desire is intensifying and the situation wants decisive action. Apply honest pressure — follow up, make the ask, show your passion. This is not a moment for waiting. Fiery energy now brings quick results.", "reflection": "Where do I need to turn up the heat instead of waiting?", "affirmation": "I bring passion and pressure, and results arrive quickly."},
+  {"id": 25, "cat": 1, "name": "THE THREE DROPS", "keywords": "Personal essence · Full commitment · Deep bond · Investment", "message": "Infuse the work with your true essence. A small, concentrated effort will bind the results to you eternally.", "meaning": "Three drops of something personal bind a working to its maker. This card asks you to put yourself into the work — your real effort, your signature, your heart. A small but genuine investment of yourself will tie the results to you. Half-hearted effort will not hold. Bring your true essence.", "reflection": "What would it look like to put my whole heart into this?", "affirmation": "I infuse my work with my true essence, and the results stay with me."},
+  {"id": 26, "cat": 1, "name": "THE SUGAR CIRCLE", "keywords": "Protection · Boundaries · Safe zone · Sweet sanctuary", "message": "You are surrounded by a barrier of sweetness. Your blessings, relationships, and wealth are safely enclosed and fiercely protected.", "meaning": "A circle of sugar around a jar keeps sweetness in and trouble out. This card builds a protective boundary around your love, your money and your peace. Decide who and what gets inside your circle. Firm, kind boundaries keep your good things safe, and nothing negative can break through while you hold the line.", "reflection": "Who or what needs to stay outside my circle right now?", "affirmation": "I am surrounded by sweetness, and my blessings are protected."},
+  {"id": 27, "cat": 1, "name": "THE SHAKING OF THE JAR", "keywords": "Stirring energy · Movement · Wake-up call · Activation", "message": "Wake up the stagnant energy! It is time to shake things up and demand immediate movement in your situation.", "meaning": "Shaking the jar wakes up a working that has gone quiet. This card says it is time to stir things up. If a situation feels stuck, do something that creates movement — reach out, change the routine, make an unexpected move. Stagnant energy responds to action. Demand movement and you will get it.", "reflection": "What stuck situation needs a shake-up from me today?", "affirmation": "I wake up stagnant energy, and my life moves forward."},
+  {"id": 28, "cat": 1, "name": "THE SWEET OFFERING", "keywords": "Gratitude · Giving to receive · Offerings · Investment", "message": "Give generously to the spirits that guide you. A sweet offering opens the heavy doors to massive spiritual and physical rewards.", "meaning": "Sweet offerings thank the spirits, ancestors and guides who help the work. This card reminds you that giving opens doors. Give thanks, give time, give generously where it counts — to your guides, your community or an investment in yourself. What you offer with an open heart returns to you multiplied.", "reflection": "What can I offer today in gratitude for what I have already received?", "affirmation": "I give with an open heart, and great rewards come back to me."},
+  {"id": 29, "cat": 1, "name": "THE RED THREAD", "keywords": "Destiny · Fated bond · Red thread · Divine connection", "message": "Destiny is tying the knot. You are being spiritually tethered to the love or the prosperity that belongs to you by divine right.", "meaning": "A red thread binds what is meant to be together. This card says you are being tied to the love or prosperity that is truly yours. Destined connections pull, even across distance and delay. You do not have to force what is fated. Stay faithful to your path and the thread will draw it in.", "reflection": "What connection in my life feels destined, and how am I honoring it?", "affirmation": "Destiny ties me to the love and prosperity that belong to me."},
+  {"id": 30, "cat": 1, "name": "THE SWEET SURRENDER", "keywords": "Softening · Yielding · Resistance melting · Sweet victory", "message": "Resistance is futile. The walls have melted away, and your target has fully surrendered to your irresistible sweet influence.", "meaning": "This card closes the Magnetic Spells with the moment the work takes hold. Resistance is melting. Someone who was stubborn, guarded or proud is softening toward you, and the situation is yielding. Do not push now that the walls are down — meet the softening with grace, and let the sweetness finish its work.", "reflection": "Now that the resistance is softening, how will I meet it with grace?", "affirmation": "Walls melt in my presence, and sweetness wins the day."},
+  {"id": 31, "cat": 2, "name": "THE GOLDEN AURA", "keywords": "Radiance · Magnetism · Visibility · Effortless attraction", "message": "You are radiating an irresistible golden light. Your energy is magnetic, drawing exactly what you desire effortlessly towards you.", "meaning": "Your aura is bright right now. People notice you without knowing why, and good things move toward you with little effort. This is a season to be seen — post the work, walk into the room, show up fully. You do not need to try harder. You need to stop dimming yourself.", "reflection": "Where have I been dimming my light to make others comfortable?", "affirmation": "I radiate golden light, and what I desire comes to me."},
+  {"id": 32, "cat": 2, "name": "THE HYPNOTIC GAZE", "keywords": "Eye contact · Confidence · Presence · Captivation", "message": "Eye contact is your superpower. Your gaze holds absolute command, melting defenses and captivating hearts instantly.", "meaning": "Your gaze holds real power at the moment. This card says confidence is showing in your eyes, and it is disarming people. Hold eye contact, be present, listen fully. In love it can start a spark; in business it builds trust. People feel truly seen by you, and that is captivating.", "reflection": "Where can I be more fully present with the people in front of me?", "affirmation": "My gaze is steady and confident, and hearts are captivated."},
+  {"id": 33, "cat": 2, "name": "THE SIREN'S SONG", "keywords": "Allure · Charisma · Fascination · Unforgettable presence", "message": "Your presence is an intoxicating melody. They are mesmerized by your charm, unable and unwilling to look away.", "meaning": "The siren's song is impossible to ignore. Your charisma is strong right now — your voice, your energy, the way you move through a room. Someone is fascinated with you and cannot look away. Enjoy it, and stay aware of your power. Charm used kindly creates devotion; used carelessly, it creates trouble.", "reflection": "How can I use my charisma in a way I will be proud of later?", "affirmation": "My presence is a song that people love to hear."},
+  {"id": 34, "cat": 2, "name": "THE ROYAL POISE", "keywords": "Self-worth · Grace · Poise · Not chasing", "message": "Grace, elegance, and absolute self-worth. When you stop chasing and start reigning, everything comes directly to your throne.", "meaning": "The Royal Poise says stop chasing. When you know your value, you do not run after anyone — you set the standard and let the right people rise to meet it. Carry yourself with grace, raise your prices, end the one-sided effort. Everything worth having comes to someone who sits calmly on their own throne.", "reflection": "Where am I chasing something that should be coming to me?", "affirmation": "I know my worth, and everything I desire comes to my throne."},
+  {"id": 35, "cat": 2, "name": "THE VELVET TOUCH", "keywords": "Gentleness · Tenderness · Soft power · Safety", "message": "Softness is your ultimate weapon. A gentle touch and a calm demeanor will break down the highest walls built against you.", "meaning": "Softness is your strongest tool right now. The Velvet Touch says a gentle approach will succeed where force has failed. A calm word, a kind gesture, a reassuring touch can break down the highest walls. People let their guard down when they feel safe, and you are making them feel safe.", "reflection": "Where would a softer touch get through a wall I have been pushing against?", "affirmation": "My softness is powerful, and the highest walls fall to it."},
+  {"id": 36, "cat": 2, "name": "THE DIVINE MIRROR", "keywords": "Self-love · Self-worth · Reflection · Mirrored love", "message": "True magnetism begins with self-love. Reflect your own divinity, and the world will mirror that immense love back to you.", "meaning": "Everything you attract is a reflection of how you treat yourself. The Divine Mirror asks you to love yourself the way you want to be loved. Speak kindly to yourself, keep your promises to yourself, and celebrate your own beauty. The world will start mirroring that love back to you.", "reflection": "How would I treat myself today if I already felt fully loved?", "affirmation": "I love myself deeply, and the world reflects that love back to me."},
+  {"id": 37, "cat": 2, "name": "THE CENTERPIECE", "keywords": "Main attraction · Being chosen · Recognition · Priority", "message": "You are the main attraction. Step confidently into the spotlight, knowing you are chosen, preferred, and highly valued.", "meaning": "You are the centerpiece. This card brings recognition, special treatment and the feeling of being chosen first. Someone values you highly, or an opportunity singles you out. Step into the spotlight without apology. Accept the compliment, take the seat at the head of the table, and let yourself be celebrated.", "reflection": "Where am I refusing the spotlight that has been offered to me?", "affirmation": "I am chosen, preferred and highly valued."},
+  {"id": 38, "cat": 2, "name": "THE INTOXICATING SCENT", "keywords": "Lasting impression · Memory · Longing · Unforgettable charm", "message": "Your memory lingers like a sweet perfume. You have left an unforgettable mark on their mind and soul.", "meaning": "Like perfume that lingers after you leave, your presence stays with people. Someone is thinking about you even when you are not there. You have left a mark on their heart and mind. You do not need to chase or remind them — the memory of you is already doing the work.", "reflection": "What impression do I want to leave behind wherever I go?", "affirmation": "My presence lingers sweetly, and I am never forgotten."},
+  {"id": 39, "cat": 2, "name": "THE UNBOTHERED SOVEREIGN", "keywords": "Detachment · Calm · Independence · Magnetic mystery", "message": "Complete emotional independence. Your calm detachment creates an irresistible mystery that makes them chase you harder.", "meaning": "The Unbothered Sovereign does not react. This card asks you to step out of the drama and stop explaining yourself. Emotional independence is attractive — when you are calm and whole on your own, people lean in. Focus on your own life and let your mystery do the talking.", "reflection": "What reaction can I let go of today, simply by not engaging?", "affirmation": "I am calm, whole and unbothered, and that is magnetic."},
+  {"id": 40, "cat": 2, "name": "THE MAGNETIC PULL", "keywords": "Strong attraction · Reconciliation · Return · Big money", "message": "A powerful gravitational force surrounds you. What is meant for you, including lost connections, is being pulled rapidly into your orbit.", "meaning": "A powerful pull surrounds you. This card brings things back into your orbit — a lost connection, a former partner, or a large sum of money heading your way. You do not need to chase. Stay steady and receptive, and let what belongs to you come back on its own.", "reflection": "What is returning to me, and am I ready to receive it well?", "affirmation": "What is meant for me is pulled swiftly into my orbit."},
+  {"id": 41, "cat": 2, "name": "THE SWEET ILLUSION", "keywords": "Enchantment · Fantasy · Allure · Mystique", "message": "You are a beautiful, captivating dream. Let them see the fantasy you project, leaving them craving for more of your magic.", "meaning": "You are a captivating dream right now. Others see you at your most beautiful and want more. Enjoy the enchantment, and remember that real devotion grows when the fantasy and the real you meet. Let them be dazzled first, then let them see more of who you truly are.", "reflection": "Am I comfortable letting someone see the real me behind the dream?", "affirmation": "I am captivating, and my magic leaves them wanting more."},
+  {"id": 42, "cat": 2, "name": "THE HONEY QUEEN", "keywords": "Receiving · Being pampered · Provision · Royal treatment", "message": "You are the royalty of the hive. Relax and receive; others are eager to serve, pamper, and provide for you.", "meaning": "The queen of the hive does not forage — she is fed. This card says it is your turn to receive. Let people take care of you, pay for you and spoil you. Accepting is not weakness. Relax into it, say thank you, and stop refusing the help and gifts being offered.", "reflection": "Where have I been refusing help or gifts that I truly deserve?", "affirmation": "I relax and receive, and others are eager to provide for me."},
+  {"id": 43, "cat": 2, "name": "THE CONFIDENCE CROWN", "keywords": "Confidence · Certainty · Self-belief · Worthiness", "message": "Wear your confidence like a crown. Absolute certainty in your worth is the key that unlocks ultimate devotion and wealth.", "meaning": "Confidence is your crown right now. This card says absolute belief in your own worth is what unlocks love and money. Walk in as if you belong there. Ask as if the answer is yes. People follow certainty, and the universe responds to it too.", "reflection": "What would I go after today if I felt completely certain of my worth?", "affirmation": "I wear my confidence like a crown, and devotion and wealth follow."},
+  {"id": 44, "cat": 2, "name": "THE FLOWING NECTAR", "keywords": "Abundance · Flow · Ease · Receiving without force", "message": "Abundance flows to you naturally. Stop forcing the stream; simply exist in your sweetness and let the blessings pour in.", "meaning": "Nectar flows on its own. This card asks you to stop forcing and start allowing. Abundance — love, money, opportunity — moves naturally toward you when you stop straining. Do the work that is yours, then rest in your own sweetness. The more relaxed you are, the more freely the blessings pour in.", "reflection": "Where am I forcing something that would flow better if I relaxed?", "affirmation": "Abundance flows to me naturally, and I let it pour in."},
+  {"id": 45, "cat": 2, "name": "THE SPELLBINDER", "keywords": "Mastery · Control · Upper hand · Winning position", "message": "You are the master of this game. You hold the power, the charm, and the ultimate control over the outcome.", "meaning": "The Spellbinder holds the cards. You have the charm, the power and the advantage in this situation — in love or in money. Play with confidence and integrity. Do not give away your power through doubt or over-explaining. This card completes the Siren's Aura: you are the one in control.", "reflection": "What would I do differently if I truly believed I held the winning hand?", "affirmation": "I am the master of this game, and the outcome is in my hands."},
+  {"id": 46, "cat": 3, "name": "THE SWEET RETURN", "keywords": "Return · Reconciliation · Apology · Renewed love", "message": "The past is calling with a softened heart. Separation ends here, as they return to you completely captivated and ready to make amends.", "meaning": "Someone from the past is coming back with a softer heart. This card brings reconciliation — an apology, a return, a chance to start again on better terms. Separation is ending. Welcome it if it is truly good for you, and make sure the new version of the relationship is sweeter than the old one.", "reflection": "If they return, what would need to be different this time?", "affirmation": "Love returns to me with a softened heart, ready to make amends."},
+  {"id": 47, "cat": 3, "name": "THE GOLDEN HARVEST", "keywords": "Wealth · Profit · Payoff · Season of plenty", "message": "Your patience and work are paying off heavily. Step into your season of massive financial overflow and sweet prosperity.", "meaning": "Your hard work is paying off. The Golden Harvest brings money, profit and returns on your investments of time and effort. This is your season of financial overflow. Gather it in, celebrate it, and plan wisely so this harvest feeds the next one.", "reflection": "How will I gather and protect this harvest so it keeps growing?", "affirmation": "I step into my season of overflow and sweet prosperity."},
+  {"id": 48, "cat": 3, "name": "THE PROPOSAL", "keywords": "Commitment · Proposal · Serious offer · Next level", "message": "A serious commitment is being offered. Prepare for a sweet proposal that elevates your status and secures your future together.", "meaning": "A serious offer is on the way — a proposal, an engagement, a commitment to the next level, or a business deal too good to refuse. Things are getting real and official. Be ready to say yes to what lifts your life, and make sure the terms honor your worth.", "reflection": "What serious commitment am I ready to say yes to?", "affirmation": "I welcome a sweet commitment that secures my future."},
+  {"id": 49, "cat": 3, "name": "THE OVERFLOWING CUP", "keywords": "Overflow · Many options · Plenty · Divine favor", "message": "Blessings are overflowing. You have endless sweet options in love and wealth; your cup runs over with divine favor.", "meaning": "Your cup runs over. This card brings more than enough — many admirers, many offers, several streams of income. You get to choose rather than settle. Enjoy the abundance and choose with care, picking what truly matches your heart and your goals rather than whatever arrives first.", "reflection": "With so much on offer, what do I truly want to choose?", "affirmation": "My cup overflows with divine favor in love and wealth."},
+  {"id": 50, "cat": 3, "name": "THE CLEARED PATH", "keywords": "Obstacles removed · Clear road · Problems solved · Smooth progress", "message": "All blockages have melted away. The sweetening magic has cleared your path, making your journey forward completely effortless.", "meaning": "All blockages have melted away. The obstacle, the rival or the money problem is being cleared from your road. What felt heavy now feels light. Move forward with confidence — the way ahead is open and smooth, and you no longer have to fight for every step.", "reflection": "Now that the path is clear, what is my very next step?", "affirmation": "My path is clear, and my journey forward is effortless."},
+  {"id": 51, "cat": 3, "name": "THE PUBLIC DECLARATION", "keywords": "Going public · Recognition · Being claimed · Celebration", "message": "Hidden things are coming into the light. Get ready to be proudly claimed, celebrated, and shown off to the world.", "meaning": "What was hidden is coming into the light. This card brings public recognition — being proudly claimed by a partner, celebrated by your community, or honored in your career. Get ready to be seen and shown off. You have earned the spotlight, so stand in it fully.", "reflection": "How do I feel about being openly claimed and celebrated?", "affirmation": "I am proudly claimed, celebrated and shown to the world."},
+  {"id": 52, "cat": 3, "name": "THE SWEET MESSENGER", "keywords": "Good news · Message · Call · Confirmation", "message": "Sweet news is arriving immediately. Keep your eyes open for the message, call, or confirmation you have been praying for.", "meaning": "Sweet news is arriving. Watch for the message, call, email or confirmation you have been praying for — a reply, a job offer, an approval, a love note. It may come sooner than you expect. Keep your phone close and your heart open.", "reflection": "What news am I waiting for, and am I ready to receive it?", "affirmation": "Sweet news arrives for me right on time."},
+  {"id": 53, "cat": 3, "name": "THE UNLOCKED DOOR", "keywords": "Opportunity · Access · New home · Open heart", "message": "Access granted. The sweetest opportunities and the most guarded hearts are now fully unlocked and open to you.", "meaning": "Access granted. A door that was locked is opening — a new home, new keys, a new role, or a guarded heart finally letting you in. Walk through it confidently. You have the key now, and what was out of reach is fully available to you.", "reflection": "Which door is opening for me, and what is stopping me from walking through?", "affirmation": "The sweetest opportunities and hearts are now open to me."},
+  {"id": 54, "cat": 3, "name": "THE SWEET VICTORY", "keywords": "Victory · Winning · Success over rivals · Happy ending", "message": "You have won the game gracefully. The outcome is overwhelmingly in your favor, leaving your competition far behind.", "meaning": "You have won, and gracefully. The Sweet Victory brings success over competition, a favorable decision, or winning the heart you wanted. The outcome is overwhelmingly in your favor. Celebrate it with grace, and leave the competition behind without looking back.", "reflection": "How will I celebrate this win with grace and gratitude?", "affirmation": "I win gracefully, and the outcome is overwhelmingly in my favor."},
+  {"id": 55, "cat": 3, "name": "THE LOYAL DEVOTION", "keywords": "Loyalty · Devotion · Faithfulness · Committed love", "message": "Absolute loyalty and sweet obsession. Their eyes are only for you, entirely devoted and fiercely protective of your bond.", "meaning": "This card brings loyalty and deep devotion. The one you love has eyes only for you and is fiercely protective of your bond. Trust is growing. Let yourself relax into a love that stays, and offer the same faithfulness back so the devotion flows both ways.", "reflection": "How do I show loyalty to the person who is loyal to me?", "affirmation": "I am loved with absolute loyalty, and I return it fully."},
+  {"id": 56, "cat": 3, "name": "THE POWER COUPLE", "keywords": "Partnership · Union · Shared wealth · Unstoppable team", "message": "A union built on power and sweetness. Together, you form an unstoppable force in both romance and building generational wealth.", "meaning": "Together you are unstoppable. This card brings a powerful union — a romantic partnership or business alliance that builds love and lasting wealth together. Two people pulling in the same direction can build a legacy. Choose partners who make you stronger, and share the vision.", "reflection": "Who strengthens me, and what could we build together?", "affirmation": "Together we form an unstoppable force in love and wealth."},
+  {"id": 57, "cat": 3, "name": "THE SUDDEN SHIFT", "keywords": "Sudden change · Miracle · Turnaround · Instant manifestation", "message": "The manifestation is instant. Prepare for a rapid, miraculous shift that turns the situation completely in your favor overnight.", "meaning": "Everything can change overnight. This card brings a sudden, miraculous shift — the situation turns completely in your favor, faster than you expected. Stay ready and flexible. When the turn comes, move with it quickly and confidently instead of doubting your good luck.", "reflection": "Am I ready to accept a sudden change for the better?", "affirmation": "Miracles arrive for me suddenly, and everything turns in my favor."},
+  {"id": 58, "cat": 3, "name": "THE GENEROUS GIFT", "keywords": "Gifts · Being spoiled · Provision · Material blessings", "message": "You are worthy of being spoiled. Expect a generous financial gift, luxury treatment, or massive material blessings to come your way.", "meaning": "You are worthy of being spoiled. Expect a generous gift, financial help, luxury treatment or support from someone who wants to provide for you. Receive it without guilt. Gratitude keeps the generosity flowing, so say thank you and let yourself enjoy it.", "reflection": "Can I accept a generous gift without feeling I have to earn it?", "affirmation": "I am worthy of being spoiled, and generosity flows to me."},
+  {"id": 59, "cat": 3, "name": "THE EVERLASTING BOND", "keywords": "Soul tie · Lasting bond · Eternal love · Deep roots", "message": "A permanent, sweet soul tie has been formed. Your roots are intertwined with theirs forever in perfect harmony.", "meaning": "A permanent bond has formed. This card speaks of a soul connection rooted so deeply it will last — in love, in family or in friendship. Your lives are intertwined in harmony. Nurture it carefully, because a bond like this is one of life's greatest treasures.", "reflection": "How will I nurture the deepest bond in my life this week?", "affirmation": "Our roots are intertwined forever in perfect harmony."},
+  {"id": 60, "cat": 3, "name": "THE SWEETEST LIFE", "keywords": "Fulfillment · Luxury · Peace · The sweet life", "message": "The ultimate harvest. You have manifested a life dripping with luxury, peace, and unbreakable love. Enjoy your sweet kingdom.", "meaning": "The final card of the deck and the ultimate harvest. You have manifested a life full of luxury, peace and lasting love. This is the sweet kingdom you were working toward. Pause and enjoy it. Gratitude for this moment keeps the honey flowing for years to come.", "reflection": "What in my life is already sweet, and how will I savor it today?", "affirmation": "I live a life dripping with luxury, peace and unbreakable love."}
+];
+
+// -- DECK STATE --
+let shuffledDeck = [...CARDS];
+let drawnIndex = 0;
+let currentCard = null;
+let currentView = 'deck';
+let cardOrigin = 'deck';          // deck | spread | all | history
+const STORE = 'mhp_';
+
+const preloaded = {};
+
+function preload(cards) {
+  cards.forEach(c => {
+    if (!c || preloaded[c.id]) return;
+    const img = new Image();
+    img.src = c.id + '.webp';
+    preloaded[c.id] = img;
+  });
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// -- ACCESS CONTROL --
+const VALID_CODE = 'HONEY2026';
+
+function unlock() {
+  document.getElementById('access-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  initDeck();
+}
+
+function checkCode() {
+  var rawInput = document.getElementById('code-input').value;
+  var input = rawInput.trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+  if (input === VALID_CODE) {
+    try { localStorage.setItem(STORE + 'unlocked', '1'); } catch (e) {}
+    unlock();
+  } else {
+    var err = document.getElementById('error-msg');
+    err.style.display = 'block';
+    document.getElementById('code-input').style.borderColor = '#E8876A';
+    setTimeout(function() {
+      err.style.display = 'none';
+      document.getElementById('code-input').style.borderColor = '';
+    }, 3000);
+  }
+}
+
+document.getElementById('code-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') checkCode();
+});
+
+// -- INIT --
+function initDeck() {
+  shuffledDeck = shuffleArray([...CARDS]);
+  drawnIndex = 0;
+  preload(shuffledDeck.slice(0, 3));
+  [updateCounter, buildCategoryTabs, () => buildAllCards(CARDS), initSpread]
+    .forEach(step => { try { step(); } catch (e) { console.error('init step failed:', e); } });
+}
+
+function updateCounter() {
+  const remaining = shuffledDeck.length - drawnIndex;
+  document.getElementById('counter').textContent = `${remaining} Cards`;
+}
+
+// -- VIEWS --
+function switchView(view) {
+  currentView = view;
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  ['deck-view', 'card-view', 'all-cards-view', 'spread-view', 'history-view']
+    .forEach(id => { document.getElementById(id).style.display = 'none'; });
+
+  if (view === 'deck') {
+    document.getElementById('deck-view').style.display = 'flex';
+    document.getElementById('nav-deck').classList.add('active');
+  } else if (view === 'card') {
+    document.getElementById('card-view').style.display = 'flex';
+    updateCardActions();
+    const navId = cardOrigin === 'spread' ? 'nav-spread'
+                : cardOrigin === 'all' ? 'nav-all'
+                : cardOrigin === 'history' ? 'nav-history' : 'nav-deck';
+    document.getElementById(navId).classList.add('active');
+  } else if (view === 'all') {
+    document.getElementById('all-cards-view').style.display = 'flex';
+    document.getElementById('nav-all').classList.add('active');
+  } else if (view === 'spread') {
+    document.getElementById('spread-view').style.display = 'flex';
+    document.getElementById('nav-spread').classList.add('active');
+  } else if (view === 'history') {
+    document.getElementById('history-view').style.display = 'flex';
+    document.getElementById('nav-history').classList.add('active');
+    renderHistory();
+  }
+  window.scrollTo(0, 0);
+}
+
+function showDeck() { switchView('deck'); }
+
+function updateCardActions() {
+  const box = document.getElementById('card-view-actions');
+  box.innerHTML = '';
+  const add = (label, cls, fn) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'btn ' + cls;
+    b.textContent = label;
+    b.onclick = fn;
+    box.appendChild(b);
+  };
+  if (cardOrigin === 'spread') {
+    add('← Back to the Spread', 'btn-primary', () => switchView('spread'));
+  } else if (cardOrigin === 'all') {
+    add('← Back to All Cards', 'btn-primary', () => switchView('all'));
+  } else if (cardOrigin === 'history') {
+    add('← Back to Journal', 'btn-primary', () => switchView('history'));
+  } else {
+    add('Pull Another', 'btn-primary', drawCard);
+    add('Back to Deck', 'btn-secondary', showDeck);
+  }
+}
+
+// -- SHUFFLE --
+function shuffleDeck() {
+  const pile = document.getElementById('deck-pile');
+  pile.classList.add('shuffling');
+  setTimeout(() => { pile.classList.remove('shuffling'); }, 1800);
+  shuffledDeck = shuffleArray([...CARDS]);
+  drawnIndex = 0;
+  preload(shuffledDeck.slice(0, 3));
+  updateCounter();
+}
+
+// -- DRAW --
+function drawCard() {
+  if (drawnIndex >= shuffledDeck.length) {
+    shuffledDeck = shuffleArray([...CARDS]);
+    drawnIndex = 0;
+  }
+  currentCard = shuffledDeck[drawnIndex++];
+  cardOrigin = 'deck';
+  preload(shuffledDeck.slice(drawnIndex, drawnIndex + 3));
+  updateCounter();
+  showCardUnrevealed(currentCard);
+  document.getElementById('drawn-count').textContent = `Card ${drawnIndex} of ${CARDS.length}`;
+  switchView('card');
+}
+
+function showCardUnrevealed(card) {
+  cardRevealed = false;
+  const backEl = document.getElementById('card-back-el');
+  const faceEl = document.getElementById('card-face');
+  backEl.style.display = 'flex';
+  faceEl.style.display = 'none';
+  renderCardFace(card, faceEl);
+  document.getElementById('reading-panel').style.display = 'none';
+  document.getElementById('reading-panel').innerHTML = '';
+  document.getElementById('reading-hint').style.display = 'none';
+}
+
+function renderCardFace(card, el) {
+  el.innerHTML = `<img src="${card.id}.webp" alt="${card.name}" onerror="this.onerror=null; this.src='';">`;
+}
+
+function renderReadingPanel(card) {
+  const panel = document.getElementById('reading-panel');
+  panel.innerHTML = `
+    <div class="reading-category">${CATEGORIES[card.cat]} · No. ${card.id}</div>
+    <div class="reading-name">${card.name}</div>
+    <div class="reading-keywords">${card.keywords}</div>
+    <div class="card-section-label">✦ The Sweet Word</div>
+    <div class="card-message">${card.message}</div>
+    <div class="card-section-label">◆ What the Jar Reveals</div>
+    <div class="card-meaning">${card.meaning}</div>
+    <div class="card-section-label">❖ Stir the Pot</div>
+    <div class="card-reflection">${card.reflection}</div>
+    <div class="card-affirmation">“${card.affirmation}”</div>
+    <div class="card-footer-brand">PsychicSoulStar · The Mystic Honey Pot Oracle</div>
+  `;
+  panel.style.display = 'block';
+  document.getElementById('reading-hint').style.display = 'block';
+}
+
+let cardRevealed = false;
+
+function flipCard() {
+  if (!currentCard) return;
+  if (cardRevealed) {
+    cardRevealed = false;
+    document.getElementById('card-back-el').style.display = 'flex';
+    document.getElementById('card-face').style.display = 'none';
+    document.getElementById('reading-panel').style.display = 'none';
+    document.getElementById('reading-hint').style.display = 'none';
+    return;
+  }
+  cardRevealed = true;
+  document.getElementById('card-back-el').style.display = 'none';
+  document.getElementById('card-face').style.display = 'block';
+  if (cardOrigin === 'deck') logDraw(currentCard, 'Daily pull');
+  renderReadingPanel(currentCard);
+}
+
+// -- ALL CARDS --
+let activeCategory = 'all';
+
+function buildCategoryTabs() {
+  const container = document.getElementById('cat-tabs');
+  container.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.className = 'cat-tab active';
+  allBtn.textContent = 'All 60';
+  allBtn.onclick = () => filterByCategory('all', allBtn);
+  container.appendChild(allBtn);
+
+  CATEGORIES.forEach((name, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'cat-tab';
+    btn.textContent = CAT_TABS[i];
+    btn.onclick = () => filterByCategory(i, btn);
+    container.appendChild(btn);
+  });
+}
+
+function filterByCategory(cat, btn) {
+  activeCategory = cat;
+  document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterCards(document.getElementById('search-input').value);
+}
+
+function filterCards(term) {
+  if (term === undefined) term = document.getElementById('search-input').value;
+  const lower = term.toLowerCase().trim();
+  const filtered = CARDS.filter(c => {
+    const matchCat = activeCategory === 'all' || c.cat === activeCategory;
+    const matchSearch = !lower || c.name.toLowerCase().includes(lower) ||
+      c.message.toLowerCase().includes(lower) || c.keywords.toLowerCase().includes(lower) ||
+      c.meaning.toLowerCase().includes(lower);
+    return matchCat && matchSearch;
+  });
+  buildAllCards(filtered);
+}
+
+function buildAllCards(cards) {
+  const grid = document.getElementById('cards-grid');
+  grid.innerHTML = '';
+  if (!cards.length) {
+    grid.innerHTML = '<p class="history-empty" style="grid-column:1/-1">No card matches that search.</p>';
+    return;
+  }
+  cards.forEach(card => {
+    const el = document.createElement('div');
+    el.className = 'mini-card';
+    el.onclick = () => openCardFromList(card, 'all');
+    el.innerHTML = `
+      <img class="mini-thumb" src="${card.id}.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+      <div class="mini-body">
+        <div class="mini-card-num">No. ${card.id} · ${CATEGORIES[card.cat]}</div>
+        <div class="mini-card-name">${card.name}</div>
+        <div class="mini-card-truth">${card.keywords}</div>
+      </div>
+    `;
+    grid.appendChild(el);
+  });
+}
+
+function openCardFromList(card, origin) {
+  currentCard = card;
+  cardOrigin = origin || 'all';
+  showCardUnrevealed(card);
+  document.getElementById('drawn-count').textContent = `Card No. ${card.id}`;
+  switchView('card');
+  flipCard();
+}
+
+// -- JOURNAL / DRAW LOG (localStorage) --
+const HKEY = STORE + 'history';
+
+function loadHistory() {
+  try { return JSON.parse(localStorage.getItem(HKEY) || '[]'); }
+  catch (e) { return []; }
+}
+
+function saveHistory(h) {
+  try { localStorage.setItem(HKEY, JSON.stringify(h.slice(-300))); }
+  catch (e) { console.error('journal save failed:', e); }
+}
+
+function logDraw(card, context) {
+  if (!card) return;
+  const h = loadHistory();
+  const last = h[h.length - 1];
+  const now = Date.now();
+  // ignore an identical entry within a few seconds (double taps, re-flips)
+  if (last && last.id === card.id && last.context === context && now - last.t < 5000) return;
+  h.push({ t: now, id: card.id, name: card.name, context: context, note: '' });
+  saveHistory(h);
+}
+
+function dayLabel(ts) {
+  const d = new Date(ts), t = new Date();
+  const same = (a, b) => a.toDateString() === b.toDateString();
+  const y = new Date(t.getTime() - 86400000);
+  if (same(d, t)) return 'Today';
+  if (same(d, y)) return 'Yesterday';
+  return d.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function timeLabel(ts) {
+  return new Date(ts).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+}
+
+function renderHistory() {
+  const h = loadHistory();
+  const sum = document.getElementById('history-summary');
+  const list = document.getElementById('history-list');
+
+  if (!h.length) {
+    sum.style.display = 'none';
+    list.innerHTML = '<p class="history-empty">Your journal is still empty.<br>' +
+      'Every card you pull is saved here automatically.</p>';
+    return;
+  }
+  sum.style.display = 'block';
+
+  const counts = {};
+  h.forEach(e => { counts[e.name] = (counts[e.name] || 0) + 1; });
+  const repeats = Object.keys(counts).filter(n => counts[n] > 1)
+    .sort((a, b) => counts[b] - counts[a]).slice(0, 3);
+
+  sum.innerHTML =
+    '<div class="history-summary-top">' +
+      '<div class="history-count">' + h.length + '<span>pulls</span></div>' +
+      '<div class="history-count">' + Object.keys(counts).length + '<span>cards seen</span></div>' +
+    '</div>' +
+    (repeats.length
+      ? '<div class="history-label">Cards that keep coming back</div><div class="history-repeat">' +
+        repeats.map(n => '<b>' + n + '</b> · ' + counts[n] + ' times').join('<br>') + '</div>'
+      : '<div class="history-repeat" style="opacity:0.6">No card has repeated yet.</div>');
+
+  let html = '', lastDay = '';
+  h.slice().reverse().forEach(e => {
+    const d = dayLabel(e.t);
+    if (d !== lastDay) { html += '<div class="history-day">' + d + '</div>'; lastDay = d; }
+    const note = (e.note || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+    html +=
+      '<div class="history-entry">' +
+        '<img class="history-thumb" src="' + e.id + '.webp" alt="" data-card="' + e.id + '">' +
+        '<div class="history-body">' +
+          '<div class="history-name" data-card="' + e.id + '">' + e.name + '</div>' +
+          '<div class="history-meta">' + timeLabel(e.t) + ' · ' + e.context + '</div>' +
+          '<input class="history-note" data-t="' + e.t + '" value="' + note + '"' +
+                ' placeholder="What did it sweeten for you?">' +
+        '</div>' +
+      '</div>';
+  });
+  list.innerHTML = html;
+  list.querySelectorAll('.history-thumb').forEach(img => {
+    img.onerror = function () { this.style.visibility = 'hidden'; };
+  });
+}
+
+// notes save as they are typed; thumbnails and names open the full reading
+document.getElementById('history-list').addEventListener('change', function (e) {
+  const inp = e.target.closest('.history-note');
+  if (!inp) return;
+  const t = Number(inp.dataset.t);
+  const h = loadHistory();
+  const row = h.find(x => x.t === t);
+  if (row) { row.note = inp.value; saveHistory(h); }
+});
+
+document.getElementById('history-list').addEventListener('click', function (e) {
+  const el = e.target.closest('[data-card]');
+  if (!el) return;
+  const card = CARDS.find(c => c.id === Number(el.dataset.card));
+  if (card) openCardFromList(card, 'history');
+});
+
+const NL = String.fromCharCode(10);
+
+function exportHistory(btn) {
+  const h = loadHistory();
+  if (!h.length) return;
+  const lines = ['THE MYSTIC HONEY POT ORACLE — MY JOURNAL', ''];
+  let lastDay = '';
+  h.forEach(e => {
+    const d = dayLabel(e.t);
+    if (d !== lastDay) { lines.push('', d.toUpperCase()); lastDay = d; }
+    lines.push('  ' + timeLabel(e.t) + '  ' + e.name + '  (' + e.context + ')');
+    if (e.note) lines.push('      ' + e.note);
+  });
+  const text = lines.join(NL);
+  const done = () => {
+    if (!btn) return;
+    const old = btn.dataset.label || btn.textContent;
+    btn.dataset.label = old;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => { btn.textContent = old; }, 1800);
+  };
+  try {
+    navigator.clipboard.writeText(text).then(done, () => fallbackCopy(text, done));
+  } catch (err) { fallbackCopy(text, done); }
+}
+
+function fallbackCopy(text, done) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); done(); } catch (e) {}
+  document.body.removeChild(ta);
+}
+
+let clearArmed = null;
+
+function clearHistory(btn) {
+  if (!loadHistory().length) return;
+  if (!btn) { doClear(); return; }
+
+  if (!clearArmed) {                       // first tap: ask for confirmation in place
+    btn.dataset.label = btn.dataset.label || btn.textContent;
+    btn.textContent = 'Tap again to erase';
+    btn.classList.add('btn-danger');
+    clearArmed = setTimeout(() => { resetClearButton(btn); }, 5000);
+    return;
+  }
+  resetClearButton(btn);                   // second tap: do it
+  doClear();
+}
+
+function resetClearButton(btn) {
+  clearTimeout(clearArmed);
+  clearArmed = null;
+  if (btn) {
+    btn.textContent = btn.dataset.label || 'Clear';
+    btn.classList.remove('btn-danger');
+  }
+}
+
+function doClear() {
+  try { localStorage.removeItem(HKEY); } catch (e) { console.error('clear failed:', e); }
+  renderHistory();
+}
+
+// -- SPREADS --
+const SPREADS = [
+  {
+    "title": "The Daily Drop",
+    "sub": "One card · Daily sweetening",
+    "note": "One drop of honey a day. Pull it in the morning, carry its word with you, and notice where it shows up.",
+    "byPillar": false,
+    "positions": [
+      {
+        "name": "Today's Honey",
+        "hint": "the sweetness to work with today"
+      }
+    ]
+  },
+  {
+    "title": "Ingredient, Spell & Harvest",
+    "sub": "Three cards · The core spread",
+    "note": "Read it like a recipe: what you bring, what you do, what you receive. Read left to right, out loud.",
+    "byPillar": false,
+    "positions": [
+      {
+        "name": "The Ingredient",
+        "hint": "what you already hold to draw on"
+      },
+      {
+        "name": "The Spell",
+        "hint": "the action that sets it working"
+      },
+      {
+        "name": "The Harvest",
+        "hint": "the sweetness this brings in"
+      }
+    ]
+  },
+  {
+    "title": "Sweeten the Heart",
+    "sub": "Three cards · For love and connection",
+    "note": "For a person on your mind. Ask what is true, not only what you hope, and let the third card guide your next move.",
+    "byPillar": false,
+    "positions": [
+      {
+        "name": "Their Heart",
+        "hint": "where their feelings truly sit"
+      },
+      {
+        "name": "The Bitter",
+        "hint": "what needs softening between you"
+      },
+      {
+        "name": "The Sweetener",
+        "hint": "how to bring sweetness back"
+      }
+    ]
+  },
+  {
+    "title": "The Honey Jar",
+    "sub": "Four cards · One from each category",
+    "note": "One card from each part of the deck, layered like a jar. Read all four together before you read any one apart.",
+    "byPillar": true,
+    "positions": [
+      {
+        "name": "The Element",
+        "hint": "the gift to draw on"
+      },
+      {
+        "name": "The Working",
+        "hint": "the action to take"
+      },
+      {
+        "name": "The Aura",
+        "hint": "how to carry yourself"
+      },
+      {
+        "name": "The Harvest",
+        "hint": "what is coming in"
+      }
+    ]
+  },
+  {
+    "title": "The Sugar Jar Spell",
+    "sub": "Five cards · For a big desire",
+    "note": "Save this for something that truly matters — love, money or a major wish. Write the desire down before you pull.",
+    "byPillar": false,
+    "positions": [
+      {
+        "name": "The Desire",
+        "hint": "the wish as it truly is"
+      },
+      {
+        "name": "The Bitter",
+        "hint": "what stands in the way"
+      },
+      {
+        "name": "The Sweetener",
+        "hint": "the help already around you"
+      },
+      {
+        "name": "The Seal",
+        "hint": "what you must commit to"
+      },
+      {
+        "name": "The Harvest",
+        "hint": "where this leads if you follow through"
+      }
+    ]
+  }
+];
+
+let activeSpread = 1;                 // Ingredient, Spell & Harvest by default
+let spreadCards = [];
+let spreadRevealed = [];
+
+function initSpread() {
+  markActiveTab();
+  newSpread();
+}
+
+function markActiveTab() {
+  document.querySelectorAll('#spread-tabs .spread-tab').forEach(b => {
+    b.classList.toggle('active', Number(b.dataset.spread) === activeSpread);
+  });
+}
+
+function selectSpread(i) {
+  if (i === null || isNaN(i) || i < 0 || i >= SPREADS.length) return;
+  activeSpread = i;
+  markActiveTab();
+  newSpread();
+}
+
+// one listener on the container - survives any re-render of the buttons
+document.getElementById('spread-tabs').addEventListener('click', function (e) {
+  const btn = e.target.closest('.spread-tab');
+  if (btn) selectSpread(Number(btn.dataset.spread));
+});
+
+function newSpread() {
+  const sp = SPREADS[activeSpread];
+  const n = sp.positions.length;
+  if (sp.byPillar) {
+    // one card from each category, in category order
+    spreadCards = sp.positions.map((_, i) =>
+      shuffleArray(CARDS.filter(c => c.cat === i))[0]);
+  } else {
+    spreadCards = shuffleArray([...CARDS]).slice(0, n);
+  }
+  spreadRevealed = new Array(n).fill(false);
+  preload(spreadCards);
+  document.getElementById('spread-title').textContent = sp.title;
+  document.getElementById('spread-subtitle').textContent = sp.sub;
+  document.getElementById('spread-note').textContent = sp.note;
+  renderSpread();
+}
+
+// -- AUTO-UNLOCK: defined here, called at the very end of this script, because
+// unlock() reaches into consts that are declared further down.
+function autoUnlock() {
+  try {
+    if (localStorage.getItem(STORE + 'unlocked') === '1') unlock();
+  } catch (e) {
+    console.error('auto-unlock failed:', e);
+  }
+}
+
+function renderSpread() {
+  const sp = SPREADS[activeSpread];
+  const n = sp.positions.length;
+  const grid = document.getElementById('spread-grid');
+  const cols = n === 1 ? 1 : (n === 4 ? 2 : 3);
+  grid.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+  grid.style.maxWidth = (n === 1 ? '200px' : (n === 4 ? '360px' : '500px'));
+  grid.innerHTML = '';
+
+  spreadCards.forEach((card, i) => {
+    const slot = document.createElement('div');
+    if (spreadRevealed[i]) {
+      slot.className = 'spread-card-slot revealed';
+      slot.innerHTML = `
+        <img class="spread-slot-img" src="${card.id}.webp" alt="${card.name}"
+             onerror="this.style.display='none';">
+        <div class="spread-slot-label">${sp.positions[i].name}</div>
+        <div class="spread-slot-hint">${sp.positions[i].hint}</div>
+        <div class="spread-slot-name">${card.name}</div>
+        <div class="spread-slot-read">Tap for the reading →</div>
+      `;
+      slot.onclick = () => openCardFromList(card, 'spread');
+    } else {
+      slot.className = 'spread-card-slot unrevealed';
+      slot.innerHTML = `<img src="card_back.webp" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='<span class=&quot;spread-mark&quot;>✦</span>';">` +
+        `<div class="spread-slot-pos">${sp.positions[i].name}</div>`;
+      slot.onclick = () => {
+        spreadRevealed[i] = true;
+        logDraw(spreadCards[i], sp.title + ' · ' + sp.positions[i].name);
+        renderSpread();
+      };
+    }
+    grid.appendChild(slot);
+  });
+}
+
+autoUnlock();
+
+</script>
+</body>
+</html>
